@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    /* background-color: rgb(5, 5, 5); */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+    font-size: 47px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: none;
+}
+
+.header {
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    /* padding: 0px; */
+    /* width: 100%; */
+}
+
+.intro-text {
+    /* height: 80%;
+    display: flex;
+    flex-direction: column; */
+    padding: 10%;
+}
+
+.hello {
+    height: 40%;
+    display: flex;
+    align-items: end;
+}
+
+.title {
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.title-about {
+    height: 58%;
+    font-size: 21px;
+}
+
+.title-about h3 {
+    display: flex;
+    align-items: center;
+    height: 18%;
+}
+
+.image {
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.profile {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.about-me-text {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-text h1 {
+    height: 30%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-me-text p {
+    height: 70%;
+    font-size: 24px;
+    color: #353b48;
+}
+
+.my-skills {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    justify-content: space-evenly;
+}
+
+.pentagon {
+    display: flex;
+    justify-content: center;
+}
+
+.quotes {
+}
+
+.coffee-with-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 50px; */
+    /* padding: 20%; */
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+}
+
+#message {
+}
+
+.black {
+    color: black;
+}
+
+.w-100 {
+    width: 0%;
+}
+
+.form {
+    position: relative;
+    margin: 0 auto;
+    min-height: 135.5px;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-size: 2.5em;
+    color: #838383
+}
+
+.carousel-inner {
+    height: 600px;
+    background: #e55c4c;
+}
+
+.carousel-caption {
+    font-family: serif;
+    font-style: italic;
+    padding-top: 200px;
+    top: 50%;
+}
+
+.fotter {
+    background-color: white;
+    /* padding-top: 70px; */
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fotter img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 29%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foot-center-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foot-title {
+    font-family: 'Sacramento',cursive;
+    text-transform: none;
+    font-weight: 400;
+    color: #41b0bf !important;
+    font-size: 3em !important;
+}
+
+.social-media-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.coffee-with-me p {
+    text-align: center;
+    color: #838383;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 21px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        align-items: center;
+    }
+
+    .footer img {
+        align-items: center;
+    }
+
+    #submit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .coffee-with-me h1{
+        font-size: 1.8em;
+    }
+
+    .form {
+    }
+
+    #message {
+    }
+
+    .carousel-caption {
+        font-size: 0.7em;
+    }
+
+    .pentagon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer img {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        align-items: center;
+    }
+
+    .about-me-text {
+        width: 100%;
+    }
+
+    .about-me-text h1 {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hello h2 {
+        font-size: 1.4em;
+
+    }
+    .title h1{
+        font-size: 1.8em;
+
+    }
+    .title-about h3{
+        font-size: 1.1em;
+    }
+    .title-about div h3{
+         font-size: 1.1em;
+    }
+}
