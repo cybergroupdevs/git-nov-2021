@@ -4,4 +4,6 @@ This is new test file
 This is a new change
 
 
-changes on origin that are not on upstream
+
+This is a line from origin which does not exist on upstream
+
