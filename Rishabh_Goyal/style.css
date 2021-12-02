@@ -1,0 +1,36 @@
+.row{
+    color: #f1dddd;
+    background: #2d3c3f;
+    border: 1px solid #f1dddd;
+    border-radius: 4px;
+    list-style-type: none;
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+}
+
+.left{
+    float: none;
+    width: auto;
+}
+
+.container{
+    overflow: auto;
+}
+
+
+#menulist {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  @media screen and (min-width: 540px) {
+    .left {width: 200px; float: left;}
+    .right {margin-left: 216px;}
+}
+
+@media screen and (max-width: 320px) {
+    .left {width: 100px; float: right;}
+    .right {margin-left: 50px;}
+}
