@@ -1,0 +1,28 @@
+.add-container{
+    width: 100%;
+}
+.add-container input,.add-container button{
+    display: inline-block;
+}
+.add-container button{
+    margin-top: -5px;
+    margin-left: -5px;
+}
+.todo-container{
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.todo-text{
+    text-align: center;
+    padding: 4%;
+}
+.todo-delete{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+.todo-delete p{
+    padding-top: 10px;
+}
