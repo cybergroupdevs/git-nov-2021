@@ -1,5 +1,17 @@
 var flag = true;
 var extend = document.querySelector("#extend");
+var text = document.querySelector(".text");
+text.addEventListener("keypress", function(e){
+    e.preventDefault();
+    alert("Enter number and operators")
+})
+
+text.addEventListener("paste", function(e){
+    e.preventDefault();
+    alert("not allowed")
+})
+
+document.addEventListener('contextmenu', event => event.preventDefault());
 function add(e) {
     e.preventDefault();
     console.log(e);
@@ -18,6 +30,13 @@ function add(e) {
                     <div class="col rounded"><a>cos</a></div>
                     <div class="col rounded"><a>tan</a></div>
                     <div class="col rounded"><a>^</a></div>`
+        // var divRow = document.createElement("div");
+        // divRow.classList.add("row");
+        // divRow.classList.add("new-row");
+        // divRow.innerHTML = ` <div class="col rounded"><a>sin</a></div>
+        //             <div class="col rounded"><a>cos</a></div>
+        //             <div class="col rounded"><a>tan</a></div>
+        //             <div class="col rounded"><a>^</a></div>`
         if (extend.nextSibling && flag == true) {
             console.log("hello");
             extend.parentNode.insertBefore(divRow, extend.nextSibling);
@@ -31,22 +50,22 @@ function add(e) {
 }
 extend.addEventListener("click", add);
 let ans = '';
-function calculation(e){
+function calculation(e) {
     buttonText = e.target.innerText;
-    if(buttonText == 'C'){
+    if (buttonText == 'C') {
         screen.value = "";
         ans = "";
         console.log("hello");
-    }else if(buttonText == "="){
+    } else if (buttonText == "=") {
         screen.value = eval(ans);
         ans = screen.value;
 
-    }else if(buttonText == "sin"){
+    } else if (buttonText == "sin") {
         ans += buttonText;
         screen.value = ans;
-        if(buttonText == "("){
+        if (buttonText == "(") {
             let str = '';
-            while(buttonText != ")"){
+            while (buttonText != ")") {
                 str = str + buttonText;
             }
             ans += buttonText;
@@ -55,7 +74,7 @@ function calculation(e){
             screen.value = val;
         }
 
-    }else{
+    } else {
         ans += buttonText;
         screen.value = ans
     }
