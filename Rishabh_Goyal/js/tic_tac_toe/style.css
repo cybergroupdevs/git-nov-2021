@@ -1,0 +1,45 @@
+.inner-container{
+    padding-top: 20vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    background-color: black;
+    color: whitesmoke;
+}
+.row{
+    width: 40vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col{
+    border: 1px solid white;
+    height: 13.3vh;
+    width: 13.3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-left{
+    border-left: none;
+}
+
+.border-right{
+    border-right: none;
+}
+
+.border-top{
+    border-top: none;
+}
+
+.border-bottom{
+    border-bottom: none;
+}

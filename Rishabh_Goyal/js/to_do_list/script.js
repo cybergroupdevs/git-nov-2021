@@ -65,3 +65,6 @@ function create(a){
         li.children[1].addEventListener("click", remove)
         ul.appendChild(li);
 }
+
+
+
