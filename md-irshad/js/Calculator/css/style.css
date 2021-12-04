@@ -1,0 +1,29 @@
+.key{
+    color: black;
+    height: 40px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 1%;
+    text-align: center;
+    padding-top: 0.4rem;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #cdcdcd, #adadad);
+    font-weight: bold;
+}
+.num-key{
+    background: #F1F3F4;
+    font-weight: normal;
+}
+.eval-bt{
+    color: white;
+    background: #4285F4;
+}
+.calculator-head{
+    text-align: center;
+    padding: 2%;
+}
+
+textarea{
+    text-align: right;
+    border-radius: 40px;
+}
