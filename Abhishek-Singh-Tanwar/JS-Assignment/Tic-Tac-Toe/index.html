@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="rules">
+
+            
+                <h1>TIC TAC TOE</h1>   
+                <p id="ins">Game starts by just Tap on 
+                    box<br><br>First Player starts as 
+                    <b>Player 1</b><br>And<br>Second 
+                    Player as <b>Player 2</b>
+                </p>
+
+                <button id="reset" onclick="resetGameBoard()" style="margin-top: 20px;background: blueviolet; color: antiquewhite; font-size: 40px;">
+                    RESET
+                </button>
+
+      
+         
+
+        </div>      
+                <div class="tic-tac-toe">
+
+                   <div class="game-board">
+                    <div id="c-1" contenteditable="true" onclick="func1()"></div>
+                    <div id="c-2" contenteditable="true" onclick="func2()"></div>
+                    <div id="c-3" contenteditable="true"onclick="func3()"></div>
+                    <div id="c-4" contenteditable="true"onclick="func4()"></div>
+                    <div id="c-5" contenteditable="true"onclick="func5()"></div>
+                    <div id="c-6" contenteditable="true"onclick="func6()"></div>
+                    <div id="c-7" contenteditable="true"onclick="func7()"></div>
+                    <div id="c-8" contenteditable="true"onclick="func8()"></div>
+                    <div id="c-9"contenteditable="true"onclick="func9()"></div>
+
+                   </div> 
+                </div>
+
+               
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
