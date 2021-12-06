@@ -1,122 +1,64 @@
-var playerX = 'x'; 
-var playerO = 'o'; 
-var turn = 0; 
-var boardCheck; 
-var a1; 
-var a2;
-var a3;
-var b1;
-var b2;
-var b3;
-var c1;
-var c2;
-var c3;
+console.log("Welcome to Tic Tac Toe")
 
-var checkWin; 
-var xWin = false; 
-var oWin = false; 
-var winAlert; 
- 
-var newGame;
-var clearBoard;
+let turn = "X"
+let isgameover = false;
 
+// Func to change turn
+const changeTurn = ()=>{
+    return turn === "X"? "0": "X"
+}
 
-var newGame = function () {
-    $('td').one('click', function (event) {
-        if (turn == 0) {
-            $(this).text(playerX);
-            boardCheck();
-            checkWin();
-            turn = 1;
-        } else {
-            $(this).text(playerO);
-            boardCheck();
-            checkWin();
-            turn = 0;
+// Func to check for win
+const checkWin = ()=>{
+    let boxtext = document.getElementsByClassName('boxtext');
+    let wins = [
+        [0, 1, 2, 5, 5, 0],
+        [3, 4, 5, 5, 15, 0],
+        [6, 7, 8, 5, 25, 0],
+        [0, 3, 6, -5, 15, 90],
+        [1, 4, 7, 5, 15, 90],
+        [2, 5, 8, 15, 15, 90],
+        [0, 4, 8, 5, 15, 45],
+        [2, 4, 6, 5, 15, 135],
+    ]
+    wins.forEach(e =>{
+        if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "") ){
+            document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Won"
+            isgameover = true
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+            document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
+            document.querySelector(".line").style.width = "20vw";
         }
+    })
+}
+
+// Main Logic
+let boxes = document.getElementsByClassName("box");
+Array.from(boxes).forEach(element =>{
+    let boxtext = element.querySelector('.boxtext');
+    element.addEventListener('click', ()=>{
+        if(boxtext.innerText === ''){
+            boxtext.innerText = turn;
+            turn = changeTurn();
+            audioTurn.play();
+            checkWin();
+            if (!isgameover){
+                document.getElementsByClassName("info")[0].innerText  = "Turn for " + turn;
+            } 
+        }
+    })
+})
+
+// reset button
+reset.addEventListener('click', ()=>{
+    let boxtexts = document.querySelectorAll('.boxtext');
+    Array.from(boxtexts).forEach(element => {
+        element.innerText = ""
     });
-};
+    turn = "X"; 
+    isgameover = false
+    document.querySelector(".line").style.width = "0vw";
+    document.getElementsByClassName("info")[0].innerText  = "Turn for " + turn;
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
+})
 
-
-
-$(document).ready(function () {
-    newGame();
-});
-
-
-boardCheck = function () {
-    a1 = $('#a1').html();
-    a2 = $('#a2').html();
-    a3 = $('#a3').html();
-    b1 = $('#b1').html();
-    b2 = $('#b2').html();
-    b3 = $('#b3').html();
-    c1 = $('#c1').html();
-    c2 = $('#c2').html();
-    c3 = $('#c3').html();
-};
-
-
-checkWin = function () { 
-    if ((a1 == a2 && a1 == a3 && (a1 == "x")) || 
-    (b1 == b2 && b1 == b3 && (b1 == "x")) || 
-    (c1 == c2 && c1 == c3 && (c1 == "x")) || 
-    (a1 == b1 && a1 == c1 && (a1 == "x")) || 
-    (a2 == b2 && a2 == c2 && (a2 == "x")) || 
-    (a3 == b3 && a3 == c3 && (a3 == "x")) || 
-    (a1 == b2 && a1 == c3 && (a1 == "x")) || 
-    (a3 == b2 && a3 == c1 && (a3 == "x")) 
-    ) {
-        xWin = true;
-        winAlert();
-
-    } else { 
-        if ((a1 == a2 && a1 == a3 && (a1 == "o")) || 
-        (b1 == b2 && b1 == b3 && (b1 == "o")) || 
-        (c1 == c2 && c1 == c3 && (c1 == "o")) || 
-        (a1 == b1 && a1 == c1 && (a1 == "o")) || 
-        (a2 == b2 && a2 == c2 && (a2 == "o")) || 
-        (a3 == b3 && a3 == c3 && (a3 == "o")) || 
-        (a1 == b2 && a1 == c3 && (a1 == "o")) || 
-        (a3 == b2 && a3 == c1 && (a3 == "o")) 
-        ) {
-            oWin = true;
-            winAlert();
-
-        } else { 
-            if (((a1 == "x") || (a1 == "o")) && ((b1 == "x") || (b1 == "o")) && ((c1 == "x") || (c1 == "o")) && ((a2 == "x") || (a2 == "o")) && ((b2 == "x") || (b2 == "o")) && ((c2 == "x") || (c2 == "o")) && ((a3 == "x") || (a3 == "o")) && ((b3 == "x") || (b3 == "o")) && ((c3 == "x") || (c3 == "o"))) {
-                alert("It's a tie!");
-            }
-        }
-    }
-};
-
-
-
-var winAlert = function () {
-    if (xWin == true) {
-        alert("X Wins!");
-        clearBoard(); 
-    } else {
-        if (oWin == true) {
-            alert("O Wins!");
-            clearBoard(); 
-        }
-    }
-};
-
-
-var clearBoard = $('#restart').click(function (event) {
-    a1 = $('#a1').text("");
-    b1 = $('#b1').text("");
-    c1 = $('#c1').text("");
-    a2 = $('#a2').text("");
-    b2 = $('#b2').text("");
-    c2 = $('#c2').text("");
-    a3 = $('#a3').text("");
-    b3 = $('#b3').text("");
-    c3 = $('#c3').text("");
-    xWin = false;
-    oWin = false;
-    newGame();
-});
