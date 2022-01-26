@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const yargs = require('yargs')
+const chalk = require('chalk')  //used for styling the format of text
+const yargs = require('yargs')  //used for creating your own command-line commands
 const notes = require('./notes.js')
 
 // Customize yargs version
