@@ -1,0 +1,82 @@
+body {
+    margin: 0;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+h1
+{
+    text-align: center;
+    color: #311b47;
+}
+
+.container,
+.input-container,
+.task-container {
+    border: 2px solid;
+    border-color: white;
+}
+
+.input-container {
+    height: 30vh;
+    width: 100%;
+    padding-top: 30px;
+    background-color: #cc99ff;
+}
+
+.task-container {
+    height: 69.4vh;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #cc99ff 20%, #ffcccc 100%);
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.task-input {
+    background-color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 30%;
+    margin: auto;
+    display: block;
+    border-color: #311b47;
+}
+
+.task-container li {
+    font-size: 1.5rem;
+    list-style: none;
+    background-color: white;
+    width: 40%;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    height: 50px;
+}
+
+.task-hover
+{
+    visibility: hidden;
+    width: 3rem;
+    background-color: #311b47;
+    color: #fff;
+    text-align: center;
+}
+
+ul:hover .task-hover
+{
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px){
+    .task-input,
+    .task-container li {
+        width: 70%;
+    }
+}
+

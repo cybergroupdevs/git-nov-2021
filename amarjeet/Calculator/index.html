@@ -1,0 +1,94 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 class="text_1">Calculator</h1>
+    <div class="container pos">
+        <div class="row">
+            <div class="col-lg-12 nopadding">  <!-- .col-lg- (large devices - screen width equal to or greater than 992px)  -->
+                <input type="text" name="calculation" id="calculation" class="form-control"> <!-- form-control: Give textual form controls like <input>s and <textarea>s an upgrade with custom styles, sizing, focus states, and more. -->
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-3 nopadding">
+                <button id="one" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("1")'>1</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="two" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("2")'>2</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="three" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("3")'>3</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="add" class="btn btn_col btn-block btn_font" onclick='UserClickButton("+")'>+</button>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="col-3 nopadding">
+                <button id="four" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("4")'>4</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="five" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("5")'>5</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="six" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("6")'>6</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="subtract" class="btn btn_col btn-block btn_font" onclick='UserClickButton("-")'>-</button>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="col-3 nopadding">
+                <button id="seven" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("7")'>7</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="eight" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("8")'>8</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="nine" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("9")'>9</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="multiply" class="btn btn_col btn-block btn_font" onclick='UserClickButton("*")'>*</button>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="col-3 nopadding">
+                <button id="dot" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton(".")'>.</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="zero" class="btn btn_col_1 btn-block btn_font" onclick='UserClickButton("0")'>0</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="clear" class="btn btn_col_1 btn-block btn_font" onclick='Clear()'>C</button>
+            </div>      
+            <div class="col-3 nopadding">
+                <button id="divide" class="btn btn_col btn-block btn_font" onclick='UserClickButton("/")'>/</button>
+            </div>      
+        </div>
+
+        <div class="row">
+            <div class="col nopadding">
+                <button id="ans" class="btn btn_col btn-block btn_font" onclick='Calculate()'>=</button>
+            </div>     
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

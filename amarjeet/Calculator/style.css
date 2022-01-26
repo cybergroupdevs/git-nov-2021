@@ -1,0 +1,79 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #0F1722;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    background: #e0e1e2;
+}
+
+.nopadding
+{
+    padding: 0;
+}
+
+.pos
+{
+    padding: 5%;
+    background-color: #151E2B;
+    border-radius: 0.5rem;
+}
+
+#calculation
+{
+    padding: 0.5%;
+    font-size: 3rem;
+    background: #e0e1e2;
+}
+
+.btn_font
+{
+    font-size: 2rem;
+}
+
+.btn_col
+{
+    background: #6C63FF;
+    border: 0.1rem solid black;
+    color: #e0e1e2;
+}
+
+.btn_col_1
+{
+    background: #0F1722;
+    border: 0.1rem solid black;
+    color: #e0e1e2;
+}
+
+.text_1
+{
+    text-align: center;
+    color: #e0e1e2;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn_col_1:hover
+{
+    background-color: #1D293A;
+    color: #e0e1e2;
+}
+
+.btn_col:hover
+{
+    background: #2a2768;
+    color: #e0e1e2;
+}
+
+
+
+
+
